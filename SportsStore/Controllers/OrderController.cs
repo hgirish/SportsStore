@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SportsStore.Controllers
 {
@@ -40,6 +37,19 @@ namespace SportsStore.Controllers
         {
             cart.Clear();
             return View();
+        }
+        public ViewResult List() => View(orderRepository.Orders.Where(o => !o.Shipped));
+        [HttpPost]
+        public IActionResult MarkShipped(int orderId)
+        {
+            Order order = orderRepository.Orders
+                .FirstOrDefault(o => o.OrderID == orderId);
+            if (order != null)
+            {
+                order.Shipped = true;
+                orderRepository.SaveOrder(order);
+            }
+            return RedirectToAction(nameof(List));
         }
     }
 }

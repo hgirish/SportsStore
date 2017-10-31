@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
@@ -8,7 +7,8 @@ using SportsStore.Models.ViewModels;
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SportsStore.Tests {
+namespace SportsStore.Tests
+{
 
     public class ProductControllerTests {
 

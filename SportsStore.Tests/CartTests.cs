@@ -1,13 +1,10 @@
 ﻿using SportsStore.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xunit;
 
 namespace SportsStore.Tests
 {
-  public  class CartTests
+    public  class CartTests
     {
         [Fact]
         public void Can_Add_New_Lines()

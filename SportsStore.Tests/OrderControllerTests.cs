@@ -2,9 +2,6 @@
 using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace SportsStore.Tests
