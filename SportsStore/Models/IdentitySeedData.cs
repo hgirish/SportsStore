@@ -13,9 +13,9 @@ namespace SportsStore.Models
         private const string adminUser = "Admin";
         private const string adminPassword = "Secret123$";
 
-        public static async void EnsurePopulatedAsync(IApplicationBuilder app)
+        public static async Task EnsurePopulatedAsync(UserManager<IdentityUser> userManager)
         {
-            UserManager<IdentityUser> userManager = app.ApplicationServices.GetRequiredService<UserManager<IdentityUser>>();
+            //UserManager<IdentityUser> userManager = app.ApplicationServices.GetRequiredService<UserManager<IdentityUser>>();
             IdentityUser user = await userManager.FindByIdAsync(adminUser);
 
             if (user == null)

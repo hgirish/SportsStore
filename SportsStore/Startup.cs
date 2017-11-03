@@ -79,8 +79,8 @@ namespace SportsStore
             });
             if (env.IsDevelopment())
             {
-                SeedData.EnsurePopulated(app);
-                IdentitySeedData.EnsurePopulatedAsync(app); 
+               // SeedData.EnsurePopulated(app);
+               // IdentitySeedData.EnsurePopulatedAsync(app); 
             }
         }
     }
